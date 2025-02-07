@@ -13,18 +13,17 @@ import (
 	_ "github.com/cosmos/cosmos-sdk/x/genutil"
 	_ "github.com/cosmos/cosmos-sdk/x/mint"
 	_ "github.com/cosmos/cosmos-sdk/x/staking"
-	_ "github.com/cosmosregistry/example/module"
 
 	appv1alpha1 "cosmossdk.io/api/cosmos/app/v1alpha1"
-	"cosmossdk.io/core/appconfig"
 	"cosmossdk.io/depinject"
+	"cosmossdk.io/depinject/appconfig"
 	"cosmossdk.io/log"
 	"github.com/cosmos/cosmos-sdk/testutil/configurator"
 	simtestutil "github.com/cosmos/cosmos-sdk/testutil/sims"
 
-	"github.com/cosmosregistry/example"
-	examplemodulev1 "github.com/cosmosregistry/example/api/module/v1"
-	"github.com/cosmosregistry/example/keeper"
+	"go.cosmonity.org/example"
+	"go.cosmonity.org/example/keeper"
+	_ "go.cosmonity.org/example/module"
 )
 
 // ExampleModule is a configurator.ModuleOption that add the example module to the app config.
@@ -32,7 +31,7 @@ var ExampleModule = func() configurator.ModuleOption {
 	return func(config *configurator.Config) {
 		config.ModuleConfigs[example.ModuleName] = &appv1alpha1.ModuleConfig{
 			Name:   example.ModuleName,
-			Config: appconfig.WrapAny(&examplemodulev1.Module{}),
+			Config: appconfig.WrapAny(&example.Module{}),
 		}
 	}
 }

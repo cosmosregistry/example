@@ -1,19 +1,19 @@
-module github.com/cosmosregistry/example/tests
+module go.cosmonity.org/example/tests
 
 go 1.23
 
 require (
 	cosmossdk.io/api v0.7.6
-	cosmossdk.io/core v0.11.0
 	cosmossdk.io/depinject v1.1.0
 	cosmossdk.io/log v1.4.1
 	github.com/cosmos/cosmos-sdk v0.50.11
-	github.com/cosmosregistry/example v1.0.0
 	github.com/stretchr/testify v1.9.0
+	go.cosmonity.org/example v1.0.0
 )
 
 require (
 	cosmossdk.io/collections v0.4.0 // indirect
+	cosmossdk.io/core v0.11.0 // indirect
 	cosmossdk.io/errors v1.0.1 // indirect
 	cosmossdk.io/math v1.4.0 // indirect
 	cosmossdk.io/store v1.1.1 // indirect
@@ -158,4 +158,4 @@ require (
 )
 
 // always test the latest module code.
-replace github.com/cosmosregistry/example => ../.
+replace go.cosmonity.org/example => ../.

@@ -5,12 +5,13 @@ import (
 	"cosmossdk.io/core/appmodule"
 	"cosmossdk.io/core/store"
 	"cosmossdk.io/depinject"
+	"cosmossdk.io/depinject/appconfig"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	modulev1 "github.com/cosmosregistry/example/api/module/v1"
-	"github.com/cosmosregistry/example/keeper"
+	"go.cosmonity.org/example"
+	"go.cosmonity.org/example/keeper"
 )
 
 var _ appmodule.AppModule = AppModule{}
@@ -22,9 +23,9 @@ func (am AppModule) IsOnePerModuleType() {}
 func (am AppModule) IsAppModule() {}
 
 func init() {
-	appmodule.Register(
-		&modulev1.Module{},
-		appmodule.Provide(ProvideModule),
+	appconfig.Register(
+		&example.Module{},
+		appconfig.Provide(ProvideModule),
 	)
 }
 
@@ -35,7 +36,7 @@ type ModuleInputs struct {
 	StoreService store.KVStoreService
 	AddressCodec address.Codec
 
-	Config *modulev1.Module
+	Config *example.Module
 }
 
 type ModuleOutputs struct {

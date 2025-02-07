@@ -6,11 +6,11 @@ import (
 	"fmt"
 
 	"cosmossdk.io/collections"
+	"github.com/cosmos/cosmos-sdk/types/query"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/cosmos/cosmos-sdk/types/query"
-	"github.com/cosmosregistry/example"
+	"go.cosmonity.org/example"
 )
 
 var _ example.QueryServer = queryServer{}

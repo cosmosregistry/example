@@ -4,8 +4,9 @@ import (
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/types/query"
-	"github.com/cosmosregistry/example"
 	"github.com/stretchr/testify/require"
+
+	"go.cosmonity.org/example"
 )
 
 func TestQueryParams(t *testing.T) {
