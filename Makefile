@@ -20,7 +20,7 @@ test-integration:
 ###  Protobuf  ###
 ##################
 
-protoVer=0.14.0
+protoVer=0.15.3
 protoImageName=ghcr.io/cosmos/proto-builder:$(protoVer)
 protoImage=$(DOCKER) run --rm -v $(CURDIR):/workspace --workdir /workspace $(protoImageName)
 
@@ -44,7 +44,7 @@ proto-lint:
 #################
 
 golangci_lint_cmd=golangci-lint
-golangci_version=v1.51.2
+golangci_version=v1.61.0
 
 lint:
 	@echo "--> Running linter"
