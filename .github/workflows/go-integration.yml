@@ -2,7 +2,8 @@ name: Integration/E2E tests
 on:
   push:
     branches:
-      - main
+      - v0.52.x
+      - v0.50.x
   pull_request:
 jobs:
   tests:
