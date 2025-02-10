@@ -126,7 +126,7 @@ func (m *QueryCounterResponse) GetCounter() uint64 {
 	return 0
 }
 
-// QueryCountersResponse is the request type for the Query/Counters RPC
+// QueryCountersRequest is the request type for the Query/Counters RPC
 type QueryCountersRequest struct {
 	// pagination defines an optional pagination for the request.
 	Pagination *query.PageRequest `protobuf:"bytes,1,opt,name=pagination,proto3" json:"pagination,omitempty"`
