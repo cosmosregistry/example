@@ -46,7 +46,7 @@ message QueryCounterResponse {
   uint64 counter = 1;
 }
 
-// QueryCountersResponse is the request type for the Query/Counters RPC
+// QueryCountersRequest is the request type for the Query/Counters RPC
 message QueryCountersRequest {
   // pagination defines an optional pagination for the request.
   cosmos.base.query.v1beta1.PageRequest pagination = 1;
