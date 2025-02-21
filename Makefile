@@ -52,7 +52,7 @@ proto-lint: proto-deps
 #################
 
 golangci_lint_cmd=golangci-lint
-golangci_version=v1.61.0
+golangci_version=v1.64.5
 
 lint:
 	@echo "--> Running linter"
